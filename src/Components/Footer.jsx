@@ -5,16 +5,17 @@ import { faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-orange-400 to-orange-500 text-white pt-10">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-8 pb-10">        
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-8 pb-10 text-center md:text-left">
+        
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <img src="rest-logo.png" alt="Logo" className="w-10 h-10" />
-          <h2 className="text-2xl font-bold italic">Food</h2>
+        <div className="flex flex-col items-center md:items-start">
+          <img src="rest-logo.png" alt="Logo" className="w-12 h-12 mb-2" />
+          <h2 className="text-3xl font-bold italic">Food</h2>
         </div>
 
         {/* Menu */}
-        <div>
-          <h3 className="font-bold mb-2">Menu</h3>
+        <div className="flex flex-col items-center md:items-start">
+          <h3 className="font-bold mb-2 text-xl">Menu</h3>
           <ul className="space-y-1 text-sm">
             <li>Kitchen</li>
             <li>Taste</li>
@@ -24,8 +25,8 @@ const Footer = () => {
         </div>
 
         {/* Meet Chefs */}
-        <div>
-          <h3 className="font-bold mb-2">Meet Chefs</h3>
+        <div className="flex flex-col items-center md:items-start">
+          <h3 className="font-bold mb-2 text-xl">Meet Chefs</h3>
           <ul className="space-y-1 text-sm">
             <li>Mostara seol</li>
             <li>Garvik los</li>
@@ -34,8 +35,8 @@ const Footer = () => {
         </div>
 
         {/* Social Media */}
-        <div>
-          <h3 className="font-bold mb-2">Social Media</h3>
+        <div className="flex flex-col items-center md:items-start">
+          <h3 className="font-bold mb-2 text-xl">Social Media</h3>
           <ul className="space-y-1 text-sm">
             <li className="flex items-center gap-2">
               <FontAwesomeIcon icon={faTwitter} /> Twitter
@@ -46,23 +47,20 @@ const Footer = () => {
           </ul>
         </div>
 
-  
-          {/* Contact */}
-          <div className="flex flex-col items-center text-center">
-            <h3 className="font-bold mb-4">Contact Us</h3>
-            <form className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-xl">
-              <div class="flex items-center gap-2 center">
-              <input
-                type="email"
-                placeholder="Email"
-                className="flex-1 border border-gray-300 rounded-full px-3 py-2"
-              />
-              <button className="bg-orange-600 hover:bg-orange-700 px-5 py-2 rounded-full">
-                Send
-              </button>
-              </div>
-            </form>
-          </div>
+        {/* Contact */}
+<div>
+  <h3 className="font-bold mb-2">Contact Us</h3>
+  <form className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md">
+    <input
+      type="email"
+      placeholder="Email"
+      className="flex-1 px-4 py-2 rounded-full text-black w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+    <button className="bg-orange-600 hover:bg-orange-700 px-4 py-2 mt-0 rounded-full whitespace-nowrap">
+      Send
+    </button>
+  </form>
+</div>
       </div>
 
       {/* Bottom line */}
