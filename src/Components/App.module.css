@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 *{
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
 }
 
 body{
   overflow-x: hidden;
   background-color: #fefefe;
+
 
 }
 
@@ -15,13 +19,13 @@ body{
     display: flex;
     justify-content: space-between;
     align-content: center;
-    /* align-items: center; */
+    align-items: center;
     justify-items: center;
     gap: auto;
     margin: 30px;
     /* margin-right: 30px; */
-}
 
+}
 
 
 .food-logo{
@@ -52,20 +56,77 @@ body{
   opacity: 1;
   cursor: pointer;
   transition: opacity 0.8s, color ease 0.3s;
+  color: #e0e0e0;
 }
 
 .contact span{
   color: #fff;
+  text-size-adjust: auto;
 }
-.contact:hover {
+.contact:hover{
   opacity: 0.8;
   color: #fff;
+  font-weight: bolder;
+}
+
+/* Hide menu and show hamburger on small screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 60px; /* adjust based on your navbar height */
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.567);
+    border-radius: 5px;
+  }
+
+  .menu div{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+  .show-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 35px;
+    max-width: 100px;
+    z-index: 1000;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+.description {
+  max-height: 60px; /* initial collapsed height */
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.description.expand {
+  max-height: 500px; /* enough to fit the whole text */
 }
 
 
 .banner {
   width: 100%;
-  height: 55vh; /* relative to screen height */
+  height: 60vh;
   max-height: 600px;
   min-height: 300px;
   overflow-x: hidden;
@@ -82,6 +143,7 @@ body{
   object-position: top;
 }
 
+
 .Lorem {
   color: white;
   position: absolute;
@@ -93,6 +155,10 @@ body{
   padding: 1rem;
   width: 90%;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .Lorem h1{
@@ -102,9 +168,10 @@ body{
 
 .Lorem p{
   font-size: larger;
-  width: 600px;
-  font-weight: 500;
-  color: #fff;
+  width: 450px;
+  text-align: center;
+  font-weight: 700;
+  color: #e8e7e7;
 }
 
 button{
@@ -177,8 +244,8 @@ button{
   justify-content: center;
   align-items: center;
   gap: 0;
-  max-width: 600px; /* ✅ control total width */
-  margin: 50px auto; /* ✅ center the grid */
+  max-width: 600px;
+  margin: 50px auto;
 }
 
 .recipe img {
@@ -197,21 +264,6 @@ button{
   margin-top: 15px;
 }
 
-/* .read-more {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: orange;
-  color: white;
-  border: none;
-  border-radius: 18px;
-  cursor: pointer;
-} */
-
-
-
-/* .footer{
-  
-} */
 .blogWrapper {
   position: relative;
   padding: 30px 15px;

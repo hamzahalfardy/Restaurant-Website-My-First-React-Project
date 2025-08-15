@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="flex flex-col items-center md:items-start">
           <img src="rest-logo.png" alt="Logo" className="w-12 h-12 mb-2" />
-          <h2 className="text-3xl font-bold italic">Food</h2>
+          <h2 className="text-3xl font-bold italic font-roboto mono">Food</h2>
         </div>
 
         {/* Menu */}
@@ -53,10 +53,10 @@ const Footer = () => {
   <form className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md">
     <input
       type="email"
-      placeholder="Email"
+      placeholder="example@gmail.com"
       className="flex-1 px-4 py-2 rounded-full text-black w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-orange-500"
     />
-    <button className="bg-orange-600 hover:bg-orange-700 px-4 py-2 mt-0 rounded-full whitespace-nowrap">
+    <button className="bg-orange-600 hover:bg-orange-700 px-4 py-2 mt-0 rounded-full whitespace-nowrap font-extrabold">
       Send
     </button>
   </form>
@@ -64,8 +64,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom line */}
-      <div className="bg-orange-600 text-center text-sm py-3">
-        Designed by Hamzah Nurudeen @HamdyCode
+      <div className="bg-orange-600 text-center text-sm py-3 font-bold">
+        Designed by Hamzah Al-fardy @HamdyCode
       </div>
     </footer>
   );

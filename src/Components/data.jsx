@@ -8,8 +8,12 @@ export const images = [
     {id: 5, img: "/images/image-5.jpeg"},
     {id: 2, img: "/images/image-2.jpeg"},
     {id: 6, img: "/images/image-6.jpeg"},
-    {id: 8, img: "/images/image-8.jpeg"}
-]
+    {id: 8, img: "/images/image-8.jpeg"},
+    {id: 9, img: "/images/egusi.jpg"},
+    {id: 10, img: "/images/meat.jpg"},
+    {id: 11, img: "/images/spag.jpg"},
+    {id: 12, img: "/images/riceAndSalad.jpg"}
+];
 
 export const blogs = [
     {
@@ -83,3 +87,4 @@ export const footers = [
   },
 ];
 
+export const descriptions = "Discover a variety of healthy food recipes that are easy to make and delicious to eat. From salads to smoothies, find your next favorite dish!"
